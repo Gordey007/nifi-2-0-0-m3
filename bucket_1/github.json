@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1716472678421,
+    "description" : "",
+    "identifier" : "github",
+    "lastModifiedTimestamp" : 1716472678421,
+    "name" : "github",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
