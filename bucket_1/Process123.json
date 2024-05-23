@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1716474100984,
+    "description" : "",
+    "identifier" : "Process123",
+    "lastModifiedTimestamp" : 1716474100984,
+    "name" : "Process123",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
