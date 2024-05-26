@@ -1,11 +1,11 @@
 {
   "externalControllerServices" : { },
   "flow" : {
-    "createdTimestamp" : 1716724451836,
-    "description" : "PromptChatGPT",
-    "identifier" : "PromptChatGPT",
-    "lastModifiedTimestamp" : 1716724451836,
-    "name" : "PromptChatGPT",
+    "createdTimestamp" : 1716740524902,
+    "description" : "",
+    "identifier" : "FacialEmotionsImageDetection",
+    "lastModifiedTimestamp" : 1716740524902,
+    "name" : "FacialEmotionsImageDetection",
     "versionCount" : 0
   },
   "flowContents" : {
@@ -19,43 +19,13 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
-        "name" : "PromptChatGPT",
+        "id" : "de349bd9-9e05-3e6a-9bd9-e6335a5494a4",
+        "name" : "FacialEmotionsImageDetection",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "58b5d971-140b-332d-86a6-c6f0673fc1aa",
-      "labelIndex" : 1,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "matched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f3a1544d-bf7c-357b-b3f2-5cfedfd2e4f7",
-        "name" : "EvaluateJsonPath",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f3a1544d-bf7c-357b-b3f2-5cfedfd2e4f7",
-        "name" : "EvaluateJsonPath",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2860027a-bb7f-3447-99d7-425549e0b750",
+      "identifier" : "db31dbc8-16df-3601-af8a-ffd61a903999",
       "labelIndex" : 1,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -66,8 +36,8 @@
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "72d51e5f-a31b-38b1-9f55-7a7a8ecf0e6b",
-        "name" : "GenerateFlowFile",
+        "id" : "4510dcf3-f297-3af2-bac5-e8cd2b33d31b",
+        "name" : "GetFile",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -79,43 +49,13 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "92fdebb1-2ff7-3821-aff2-c58cbc404ad2",
+        "id" : "120abec7-4d14-35df-ad2b-709dd6640730",
         "name" : "Funnel",
         "type" : "FUNNEL"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "ae82be14-af0e-38f8-93aa-0169c049205e",
-      "labelIndex" : 1,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
-        "name" : "PromptChatGPT",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "53c1d5b9-2d34-3668-8caf-7f34f318b2dd",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "810c22b8-c4ce-389c-8775-b1d2bcfd59a0",
+      "identifier" : "17da1e11-119e-3a3c-ab1a-cb1787282159",
       "labelIndex" : 1,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -126,8 +66,38 @@
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
-        "name" : "PromptChatGPT",
+        "id" : "de349bd9-9e05-3e6a-9bd9-e6335a5494a4",
+        "name" : "FacialEmotionsImageDetection",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "de349bd9-9e05-3e6a-9bd9-e6335a5494a4",
+        "name" : "FacialEmotionsImageDetection",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "0b03a5a7-c5a8-30b4-aacf-36f72d05ef5d",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1cea260b-0f1d-3ae2-a4eb-934925f5bb1a",
+        "name" : "GetFile",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -143,25 +113,17 @@
     "funnels" : [ {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "53c1d5b9-2d34-3668-8caf-7f34f318b2dd",
+      "identifier" : "120abec7-4d14-35df-ad2b-709dd6640730",
       "position" : {
-        "x" : -489.4303535003121,
-        "y" : 265.19839446003715
-      }
-    }, {
-      "componentType" : "FUNNEL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "92fdebb1-2ff7-3821-aff2-c58cbc404ad2",
-      "position" : {
-        "x" : -70.38908600643742,
-        "y" : 380.4103325642024
+        "x" : -512.0,
+        "y" : -8.0
       }
     } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
     "labels" : [ ],
     "maxConcurrentTasks" : 1,
-    "name" : "PromptChatGPT",
+    "name" : "FacialEmotionsImageDetection",
     "outputPorts" : [ ],
     "position" : {
       "x" : 0.0,
@@ -182,50 +144,59 @@
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "72d51e5f-a31b-38b1-9f55-7a7a8ecf0e6b",
+      "identifier" : "4510dcf3-f297-3af2-bac5-e8cd2b33d31b",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "GenerateFlowFile",
+      "name" : "GetFile",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -240.0,
-        "y" : -312.0
+        "x" : -904.0,
+        "y" : -432.0
       },
       "properties" : {
-        "character-set" : "UTF-8",
-        "File Size" : "0B",
-        "mime-type" : "application/json",
-        "generate-ff-custom-text" : "{\"question\":\"Как отрыть карту через мобильное приложение?\"}",
-        "Batch Size" : "1",
-        "Unique FlowFiles" : "false",
-        "Data Format" : "Text"
+        "Keep Source File" : "true",
+        "Minimum File Age" : "0 sec",
+        "Polling Interval" : "0 sec",
+        "Input Directory" : "C:\\Users\\gorde\\Downloads",
+        "Batch Size" : "10",
+        "Minimum File Size" : "0 B",
+        "Ignore Hidden Files" : "true",
+        "Recurse Subdirectories" : "true",
+        "File Filter" : "man.jpg"
       },
       "propertyDescriptors" : {
-        "character-set" : {
-          "displayName" : "Character Set",
+        "Keep Source File" : {
+          "displayName" : "Keep Source File",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "character-set",
+          "name" : "Keep Source File",
           "sensitive" : false
         },
-        "File Size" : {
-          "displayName" : "File Size",
+        "Minimum File Age" : {
+          "displayName" : "Minimum File Age",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "File Size",
+          "name" : "Minimum File Age",
           "sensitive" : false
         },
-        "mime-type" : {
-          "displayName" : "Mime Type",
+        "Polling Interval" : {
+          "displayName" : "Polling Interval",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "mime-type",
+          "name" : "Polling Interval",
           "sensitive" : false
         },
-        "generate-ff-custom-text" : {
-          "displayName" : "Custom Text",
+        "Input Directory" : {
+          "displayName" : "Input Directory",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "generate-ff-custom-text",
+          "name" : "Input Directory",
+          "sensitive" : false
+        },
+        "Maximum File Age" : {
+          "displayName" : "Maximum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Age",
           "sensitive" : false
         },
         "Batch Size" : {
@@ -235,18 +206,46 @@
           "name" : "Batch Size",
           "sensitive" : false
         },
-        "Unique FlowFiles" : {
-          "displayName" : "Unique FlowFiles",
+        "Maximum File Size" : {
+          "displayName" : "Maximum File Size",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Unique FlowFiles",
+          "name" : "Maximum File Size",
           "sensitive" : false
         },
-        "Data Format" : {
-          "displayName" : "Data Format",
+        "Minimum File Size" : {
+          "displayName" : "Minimum File Size",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Data Format",
+          "name" : "Minimum File Size",
+          "sensitive" : false
+        },
+        "Ignore Hidden Files" : {
+          "displayName" : "Ignore Hidden Files",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore Hidden Files",
+          "sensitive" : false
+        },
+        "Recurse Subdirectories" : {
+          "displayName" : "Recurse Subdirectories",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Recurse Subdirectories",
+          "sensitive" : false
+        },
+        "File Filter" : {
+          "displayName" : "File Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Filter",
+          "sensitive" : false
+        },
+        "Path Filter" : {
+          "displayName" : "Path Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Path Filter",
           "sensitive" : false
         }
       },
@@ -254,13 +253,54 @@
       "retryCount" : 10,
       "runDurationMillis" : 0,
       "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "1 min",
+      "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
-      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "type" : "org.apache.nifi.processors.standard.GetFile",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "failure", "unmatched" ],
+      "autoTerminatedRelationships" : [ "original", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "python-extensions",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "de349bd9-9e05-3e6a-9bd9-e6335a5494a4",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "FacialEmotionsImageDetection",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -672.0,
+        "y" : -208.0
+      },
+      "properties" : { },
+      "propertyDescriptors" : {
+        "HuggingFace Options" : {
+          "displayName" : "HuggingFace Options",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HuggingFace Options",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "python.FacialEmotionsImageDetection",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -273,63 +313,108 @@
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "f3a1544d-bf7c-357b-b3f2-5cfedfd2e4f7",
+      "identifier" : "1cea260b-0f1d-3ae2-a4eb-934925f5bb1a",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "EvaluateJsonPath",
+      "name" : "GetFile",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -232.0,
-        "y" : -112.0
+        "x" : -480.0,
+        "y" : -432.0
       },
       "properties" : {
-        "Destination" : "flowfile-attribute",
-        "question" : "$.question",
-        "Max String Length" : "20 MB",
-        "Return Type" : "json",
-        "Null Value Representation" : "empty string",
-        "Path Not Found Behavior" : "ignore"
+        "Keep Source File" : "true",
+        "Minimum File Age" : "0 sec",
+        "Polling Interval" : "0 sec",
+        "Input Directory" : "C:\\Users\\gorde\\Downloads",
+        "Batch Size" : "10",
+        "Minimum File Size" : "0 B",
+        "Ignore Hidden Files" : "true",
+        "Recurse Subdirectories" : "true",
+        "File Filter" : "women.jpg"
       },
       "propertyDescriptors" : {
-        "Destination" : {
-          "displayName" : "Destination",
+        "Keep Source File" : {
+          "displayName" : "Keep Source File",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Destination",
+          "name" : "Keep Source File",
           "sensitive" : false
         },
-        "question" : {
-          "displayName" : "question",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "question",
-          "sensitive" : false
-        },
-        "Max String Length" : {
-          "displayName" : "Max String Length",
+        "Minimum File Age" : {
+          "displayName" : "Minimum File Age",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Max String Length",
+          "name" : "Minimum File Age",
           "sensitive" : false
         },
-        "Return Type" : {
-          "displayName" : "Return Type",
+        "Polling Interval" : {
+          "displayName" : "Polling Interval",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Return Type",
+          "name" : "Polling Interval",
           "sensitive" : false
         },
-        "Null Value Representation" : {
-          "displayName" : "Null Value Representation",
+        "Input Directory" : {
+          "displayName" : "Input Directory",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Null Value Representation",
+          "name" : "Input Directory",
           "sensitive" : false
         },
-        "Path Not Found Behavior" : {
-          "displayName" : "Path Not Found Behavior",
+        "Maximum File Age" : {
+          "displayName" : "Maximum File Age",
           "dynamic" : false,
           "identifiesControllerService" : false,
-          "name" : "Path Not Found Behavior",
+          "name" : "Maximum File Age",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Maximum File Size" : {
+          "displayName" : "Maximum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Size",
+          "sensitive" : false
+        },
+        "Minimum File Size" : {
+          "displayName" : "Minimum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Size",
+          "sensitive" : false
+        },
+        "Ignore Hidden Files" : {
+          "displayName" : "Ignore Hidden Files",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore Hidden Files",
+          "sensitive" : false
+        },
+        "Recurse Subdirectories" : {
+          "displayName" : "Recurse Subdirectories",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Recurse Subdirectories",
+          "sensitive" : false
+        },
+        "File Filter" : {
+          "displayName" : "File Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Filter",
+          "sensitive" : false
+        },
+        "Path Filter" : {
+          "displayName" : "Path Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Path Filter",
           "sensitive" : false
         }
       },
@@ -340,111 +425,7 @@
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
-      "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ "original" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "python-extensions",
-        "group" : "org.apache.nifi",
-        "version" : "2.0.0-M3"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "PromptChatGPT",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -232.38908600643742,
-        "y" : 90.4103325642024
-      },
-      "properties" : {
-        "Temperature" : "0.7",
-        "OpenAI Organization ID" : "org-3oyzRS0OomKCpVHbzt7KaUEM",
-        "Request Timeout" : "60 secs",
-        "Prompt" : "Ты консультант службы поддержки самого лучшего банка.\nПомоги ответить клиенту на вопрос: \n\"${question}\".\n\nОтвечать дружелюбного и политкорректно.",
-        "Max Tokens to Generate" : "100",
-        "OpenAI Model Name" : "gpt-3.5-turbo"
-      },
-      "propertyDescriptors" : {
-        "Result Attribute" : {
-          "displayName" : "Result Attribute",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Result Attribute",
-          "sensitive" : false
-        },
-        "Temperature" : {
-          "displayName" : "Temperature",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Temperature",
-          "sensitive" : false
-        },
-        "OpenAI Organization ID" : {
-          "displayName" : "OpenAI Organization ID",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "OpenAI Organization ID",
-          "sensitive" : false
-        },
-        "API Key" : {
-          "displayName" : "API Key",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "API Key",
-          "sensitive" : true
-        },
-        "Request Timeout" : {
-          "displayName" : "Request Timeout",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Request Timeout",
-          "sensitive" : false
-        },
-        "API Base URL Path" : {
-          "displayName" : "API Base URL Path",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "API Base URL Path",
-          "sensitive" : false
-        },
-        "Prompt" : {
-          "displayName" : "Prompt",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Prompt",
-          "sensitive" : false
-        },
-        "Max Tokens to Generate" : {
-          "displayName" : "Max Tokens to Generate",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Max Tokens to Generate",
-          "sensitive" : false
-        },
-        "OpenAI Model Name" : {
-          "displayName" : "OpenAI Model Name",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "OpenAI Model Name",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "python.PromptChatGPT",
+      "type" : "org.apache.nifi.processors.standard.GetFile",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
@@ -456,7 +437,7 @@
   "parameterContexts" : { },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "flowIdentifier" : "PromptChatGPT",
+    "flowIdentifier" : "FacialEmotionsImageDetection",
     "timestamp" : 0
   }
 }
