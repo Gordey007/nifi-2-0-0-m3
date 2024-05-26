@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1716724451836,
     "description" : "PromptChatGPT",
@@ -7,5 +8,340 @@
     "name" : "PromptChatGPT",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
+        "name" : "PromptChatGPT",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2860027a-bb7f-3447-99d7-425549e0b750",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "72d51e5f-a31b-38b1-9f55-7a7a8ecf0e6b",
+        "name" : "GenerateFlowFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "53c1d5b9-2d34-3668-8caf-7f34f318b2dd",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "810c22b8-c4ce-389c-8775-b1d2bcfd59a0",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
+        "name" : "PromptChatGPT",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "92fdebb1-2ff7-3821-aff2-c58cbc404ad2",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ae82be14-af0e-38f8-93aa-0169c049205e",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
+        "name" : "PromptChatGPT",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "53c1d5b9-2d34-3668-8caf-7f34f318b2dd",
+      "position" : {
+        "x" : -489.4303535003121,
+        "y" : 265.19839446003715
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "92fdebb1-2ff7-3821-aff2-c58cbc404ad2",
+      "position" : {
+        "x" : -70.38908600643742,
+        "y" : 380.4103325642024
+      }
+    } ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "PromptChatGPT",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M3"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "72d51e5f-a31b-38b1-9f55-7a7a8ecf0e6b",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GenerateFlowFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -232.0,
+        "y" : -120.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "mime-type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mime-type",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "1 min",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "original" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "python-extensions",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M3"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "PromptChatGPT",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -232.38908600643742,
+        "y" : 90.4103325642024
+      },
+      "properties" : {
+        "Temperature" : "1.0",
+        "OpenAI Organization ID" : "org-3oyzRS0OomKCpVHbzt7KaUEM",
+        "Request Timeout" : "60 secs",
+        "Prompt" : "What is NiFi?",
+        "Max Tokens to Generate" : "100",
+        "OpenAI Model Name" : "gpt-3.5-turbo"
+      },
+      "propertyDescriptors" : {
+        "Result Attribute" : {
+          "displayName" : "Result Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Result Attribute",
+          "sensitive" : false
+        },
+        "Temperature" : {
+          "displayName" : "Temperature",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Temperature",
+          "sensitive" : false
+        },
+        "OpenAI Organization ID" : {
+          "displayName" : "OpenAI Organization ID",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "OpenAI Organization ID",
+          "sensitive" : false
+        },
+        "API Key" : {
+          "displayName" : "API Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "API Key",
+          "sensitive" : true
+        },
+        "Request Timeout" : {
+          "displayName" : "Request Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Timeout",
+          "sensitive" : false
+        },
+        "API Base URL Path" : {
+          "displayName" : "API Base URL Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "API Base URL Path",
+          "sensitive" : false
+        },
+        "Prompt" : {
+          "displayName" : "Prompt",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Prompt",
+          "sensitive" : false
+        },
+        "Max Tokens to Generate" : {
+          "displayName" : "Max Tokens to Generate",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Tokens to Generate",
+          "sensitive" : false
+        },
+        "OpenAI Model Name" : {
+          "displayName" : "OpenAI Model Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "OpenAI Model Name",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "python.PromptChatGPT",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "flowIdentifier" : "PromptChatGPT",
+    "timestamp" : 0
+  }
 }
