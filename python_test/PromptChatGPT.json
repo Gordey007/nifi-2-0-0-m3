@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1716724451836,
+    "description" : "PromptChatGPT",
+    "identifier" : "PromptChatGPT",
+    "lastModifiedTimestamp" : 1716724451836,
+    "name" : "PromptChatGPT",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
