@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1716740524902,
     "description" : "",
@@ -7,5 +8,436 @@
     "name" : "FacialEmotionsImageDetection",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "de349bd9-9e05-3e6a-9bd9-e6335a5494a4",
+        "name" : "FacialEmotionsImageDetection",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "db31dbc8-16df-3601-af8a-ffd61a903999",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4510dcf3-f297-3af2-bac5-e8cd2b33d31b",
+        "name" : "GetFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "120abec7-4d14-35df-ad2b-709dd6640730",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "17da1e11-119e-3a3c-ab1a-cb1787282159",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "de349bd9-9e05-3e6a-9bd9-e6335a5494a4",
+        "name" : "FacialEmotionsImageDetection",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "de349bd9-9e05-3e6a-9bd9-e6335a5494a4",
+        "name" : "FacialEmotionsImageDetection",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "0b03a5a7-c5a8-30b4-aacf-36f72d05ef5d",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1cea260b-0f1d-3ae2-a4eb-934925f5bb1a",
+        "name" : "GetFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "120abec7-4d14-35df-ad2b-709dd6640730",
+      "position" : {
+        "x" : -512.0,
+        "y" : -8.0
+      }
+    } ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "FacialEmotionsImageDetection",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M3"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "4510dcf3-f297-3af2-bac5-e8cd2b33d31b",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GetFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -904.0,
+        "y" : -432.0
+      },
+      "properties" : {
+        "Keep Source File" : "true",
+        "Minimum File Age" : "0 sec",
+        "Polling Interval" : "0 sec",
+        "Input Directory" : "C:\\Users\\gorde\\Downloads",
+        "Batch Size" : "10",
+        "Minimum File Size" : "0 B",
+        "Ignore Hidden Files" : "true",
+        "Recurse Subdirectories" : "true",
+        "File Filter" : "man.jpg"
+      },
+      "propertyDescriptors" : {
+        "Keep Source File" : {
+          "displayName" : "Keep Source File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Keep Source File",
+          "sensitive" : false
+        },
+        "Minimum File Age" : {
+          "displayName" : "Minimum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Age",
+          "sensitive" : false
+        },
+        "Polling Interval" : {
+          "displayName" : "Polling Interval",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Polling Interval",
+          "sensitive" : false
+        },
+        "Input Directory" : {
+          "displayName" : "Input Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Input Directory",
+          "sensitive" : false
+        },
+        "Maximum File Age" : {
+          "displayName" : "Maximum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Age",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Maximum File Size" : {
+          "displayName" : "Maximum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Size",
+          "sensitive" : false
+        },
+        "Minimum File Size" : {
+          "displayName" : "Minimum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Size",
+          "sensitive" : false
+        },
+        "Ignore Hidden Files" : {
+          "displayName" : "Ignore Hidden Files",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore Hidden Files",
+          "sensitive" : false
+        },
+        "Recurse Subdirectories" : {
+          "displayName" : "Recurse Subdirectories",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Recurse Subdirectories",
+          "sensitive" : false
+        },
+        "File Filter" : {
+          "displayName" : "File Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Filter",
+          "sensitive" : false
+        },
+        "Path Filter" : {
+          "displayName" : "Path Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Path Filter",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GetFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "original", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "python-extensions",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "de349bd9-9e05-3e6a-9bd9-e6335a5494a4",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "FacialEmotionsImageDetection",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -672.0,
+        "y" : -208.0
+      },
+      "properties" : { },
+      "propertyDescriptors" : {
+        "HuggingFace Options" : {
+          "displayName" : "HuggingFace Options",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HuggingFace Options",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "python.FacialEmotionsImageDetection",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M3"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1cea260b-0f1d-3ae2-a4eb-934925f5bb1a",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "GetFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -480.0,
+        "y" : -432.0
+      },
+      "properties" : {
+        "Keep Source File" : "true",
+        "Minimum File Age" : "0 sec",
+        "Polling Interval" : "0 sec",
+        "Input Directory" : "C:\\Users\\gorde\\Downloads",
+        "Batch Size" : "10",
+        "Minimum File Size" : "0 B",
+        "Ignore Hidden Files" : "true",
+        "Recurse Subdirectories" : "true",
+        "File Filter" : "women.jpg"
+      },
+      "propertyDescriptors" : {
+        "Keep Source File" : {
+          "displayName" : "Keep Source File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Keep Source File",
+          "sensitive" : false
+        },
+        "Minimum File Age" : {
+          "displayName" : "Minimum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Age",
+          "sensitive" : false
+        },
+        "Polling Interval" : {
+          "displayName" : "Polling Interval",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Polling Interval",
+          "sensitive" : false
+        },
+        "Input Directory" : {
+          "displayName" : "Input Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Input Directory",
+          "sensitive" : false
+        },
+        "Maximum File Age" : {
+          "displayName" : "Maximum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Age",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Maximum File Size" : {
+          "displayName" : "Maximum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Size",
+          "sensitive" : false
+        },
+        "Minimum File Size" : {
+          "displayName" : "Minimum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Size",
+          "sensitive" : false
+        },
+        "Ignore Hidden Files" : {
+          "displayName" : "Ignore Hidden Files",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore Hidden Files",
+          "sensitive" : false
+        },
+        "Recurse Subdirectories" : {
+          "displayName" : "Recurse Subdirectories",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Recurse Subdirectories",
+          "sensitive" : false
+        },
+        "File Filter" : {
+          "displayName" : "File Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Filter",
+          "sensitive" : false
+        },
+        "Path Filter" : {
+          "displayName" : "Path Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Path Filter",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GetFile",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "flowIdentifier" : "FacialEmotionsImageDetection",
+    "timestamp" : 0
+  }
 }
