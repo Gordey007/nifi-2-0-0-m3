@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1716740524902,
+    "description" : "",
+    "identifier" : "FacialEmotionsImageDetection",
+    "lastModifiedTimestamp" : 1716740524902,
+    "name" : "FacialEmotionsImageDetection",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
