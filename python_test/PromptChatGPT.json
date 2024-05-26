@@ -25,6 +25,36 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
+      "identifier" : "58b5d971-140b-332d-86a6-c6f0673fc1aa",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f3a1544d-bf7c-357b-b3f2-5cfedfd2e4f7",
+        "name" : "EvaluateJsonPath",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f3a1544d-bf7c-357b-b3f2-5cfedfd2e4f7",
+        "name" : "EvaluateJsonPath",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
       "identifier" : "2860027a-bb7f-3447-99d7-425549e0b750",
       "labelIndex" : 1,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -38,36 +68,6 @@
         "groupId" : "flow-contents-group",
         "id" : "72d51e5f-a31b-38b1-9f55-7a7a8ecf0e6b",
         "name" : "GenerateFlowFile",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "53c1d5b9-2d34-3668-8caf-7f34f318b2dd",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "810c22b8-c4ce-389c-8775-b1d2bcfd59a0",
-      "labelIndex" : 1,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
-        "name" : "PromptChatGPT",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -93,6 +93,36 @@
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
       "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "76a74b13-2830-3b25-af55-a6af7c0ef0e2",
+        "name" : "PromptChatGPT",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "53c1d5b9-2d34-3668-8caf-7f34f318b2dd",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "810c22b8-c4ce-389c-8775-b1d2bcfd59a0",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
@@ -157,12 +187,14 @@
       "name" : "GenerateFlowFile",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -232.0,
-        "y" : -120.0
+        "x" : -240.0,
+        "y" : -312.0
       },
       "properties" : {
         "character-set" : "UTF-8",
         "File Size" : "0B",
+        "mime-type" : "application/json",
+        "generate-ff-custom-text" : "{\"question\":\"Как отрыть карту через мобильное приложение?\"}",
         "Batch Size" : "1",
         "Unique FlowFiles" : "false",
         "Data Format" : "Text"
@@ -228,6 +260,89 @@
       "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
       "yieldDuration" : "1 sec"
     }, {
+      "autoTerminatedRelationships" : [ "failure", "unmatched" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M3"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f3a1544d-bf7c-357b-b3f2-5cfedfd2e4f7",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "EvaluateJsonPath",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -232.0,
+        "y" : -112.0
+      },
+      "properties" : {
+        "Destination" : "flowfile-attribute",
+        "question" : "$.question",
+        "Max String Length" : "20 MB",
+        "Return Type" : "json",
+        "Null Value Representation" : "empty string",
+        "Path Not Found Behavior" : "ignore"
+      },
+      "propertyDescriptors" : {
+        "Destination" : {
+          "displayName" : "Destination",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Destination",
+          "sensitive" : false
+        },
+        "question" : {
+          "displayName" : "question",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "question",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Return Type" : {
+          "displayName" : "Return Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Return Type",
+          "sensitive" : false
+        },
+        "Null Value Representation" : {
+          "displayName" : "Null Value Representation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Null Value Representation",
+          "sensitive" : false
+        },
+        "Path Not Found Behavior" : {
+          "displayName" : "Path Not Found Behavior",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Path Not Found Behavior",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+      "yieldDuration" : "1 sec"
+    }, {
       "autoTerminatedRelationships" : [ "original" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -251,9 +366,10 @@
       },
       "properties" : {
         "Temperature" : "0.7",
+        "OpenAI Organization ID" : "org-3oyzRS0OomKCpVHbzt7KaUEM",
         "Request Timeout" : "60 secs",
-        "Prompt" : "What is NiFi?",
-        "Max Tokens to Generate" : "10",
+        "Prompt" : "Ты консультант службы поддержки самого лучшего банка.\nПомоги ответить клиенту на вопрос: \n\"${question}\".\n\nОтвечать дружелюбного и политкорректно.",
+        "Max Tokens to Generate" : "100",
         "OpenAI Model Name" : "gpt-3.5-turbo"
       },
       "propertyDescriptors" : {
