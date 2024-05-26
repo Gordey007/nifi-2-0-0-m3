@@ -250,11 +250,10 @@
         "y" : 90.4103325642024
       },
       "properties" : {
-        "Temperature" : "1.0",
-        "OpenAI Organization ID" : "org-3oyzRS0OomKCpVHbzt7KaUEM",
+        "Temperature" : "0.7",
         "Request Timeout" : "60 secs",
         "Prompt" : "What is NiFi?",
-        "Max Tokens to Generate" : "100",
+        "Max Tokens to Generate" : "10",
         "OpenAI Model Name" : "gpt-3.5-turbo"
       },
       "propertyDescriptors" : {
