@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1716746462358,
+    "description" : "",
+    "identifier" : "RemoveRecordField",
+    "lastModifiedTimestamp" : 1716746462358,
+    "name" : "RemoveRecordField",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
