@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1716883029301,
     "description" : "",
@@ -7,5 +8,658 @@
     "name" : "t1",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c758f01a-775f-380f-9a7f-d4d810bef2c8",
+        "name" : "PublishKafka_2_6",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "94965aaf-82a7-3156-9cd6-e599ff5a00ff",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "128a1970-e820-398a-9f52-728ff3d0371a",
+        "name" : "ReplaceText",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "128a1970-e820-398a-9f52-728ff3d0371a",
+        "name" : "ReplaceText",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "34dea9c5-753b-372e-b4df-b0649429e84a",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "dac9961d-a2f1-395e-b0e9-0e37b98e64ed",
+        "name" : "ConsumeKafka_2_6",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "STATELESS",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "SINGLE_FLOWFILE_PER_NODE",
+    "flowFileOutboundPolicy" : "BATCH_OUTPUT",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "logFileSuffix" : "",
+    "maxConcurrentTasks" : 2,
+    "name" : "t1",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-kafka-2-6-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M3"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "dac9961d-a2f1-395e-b0e9-0e37b98e64ed",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "ConsumeKafka_2_6",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -592.0,
+        "y" : 432.0
+      },
+      "properties" : {
+        "Commit Offsets" : "true",
+        "max.poll.records" : "10000",
+        "group.id" : "test_stateless_in_7",
+        "bootstrap.servers" : "localhost:9092",
+        "topic_type" : "names",
+        "security.protocol" : "PLAINTEXT",
+        "max-uncommit-offset-wait" : "2 secs",
+        "sasl.mechanism" : "GSSAPI",
+        "sasl.token.auth" : "false",
+        "honor-transactions" : "true",
+        "Communications Timeout" : "60 secs",
+        "topic" : "test_stateless_in",
+        "separate-by-key" : "false",
+        "message-header-encoding" : "UTF-8",
+        "key-attribute-encoding" : "utf-8",
+        "auto.offset.reset" : "latest"
+      },
+      "propertyDescriptors" : {
+        "header-name-regex" : {
+          "displayName" : "Headers to Add as Attributes (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "header-name-regex",
+          "sensitive" : false
+        },
+        "Commit Offsets" : {
+          "displayName" : "Commit Offsets",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Commit Offsets",
+          "sensitive" : false
+        },
+        "sasl.username" : {
+          "displayName" : "Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.username",
+          "sensitive" : false
+        },
+        "max.poll.records" : {
+          "displayName" : "Max Poll Records",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max.poll.records",
+          "sensitive" : false
+        },
+        "group.id" : {
+          "displayName" : "Group ID",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "group.id",
+          "sensitive" : false
+        },
+        "bootstrap.servers" : {
+          "displayName" : "Kafka Brokers",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "bootstrap.servers",
+          "sensitive" : false
+        },
+        "topic_type" : {
+          "displayName" : "Topic Name Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "topic_type",
+          "sensitive" : false
+        },
+        "aws.profile.name" : {
+          "displayName" : "AWS Profile Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "aws.profile.name",
+          "sensitive" : false
+        },
+        "sasl.kerberos.service.name" : {
+          "displayName" : "Kerberos Service Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.kerberos.service.name",
+          "sensitive" : false
+        },
+        "security.protocol" : {
+          "displayName" : "Security Protocol",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "security.protocol",
+          "sensitive" : false
+        },
+        "ssl.context.service" : {
+          "displayName" : "SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "ssl.context.service",
+          "sensitive" : false
+        },
+        "max-uncommit-offset-wait" : {
+          "displayName" : "Max Uncommitted Time",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-uncommit-offset-wait",
+          "sensitive" : false
+        },
+        "sasl.mechanism" : {
+          "displayName" : "SASL Mechanism",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.mechanism",
+          "sensitive" : false
+        },
+        "sasl.token.auth" : {
+          "displayName" : "Token Authentication",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.token.auth",
+          "sensitive" : false
+        },
+        "honor-transactions" : {
+          "displayName" : "Honor Transactions",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "honor-transactions",
+          "sensitive" : false
+        },
+        "Communications Timeout" : {
+          "displayName" : "Communications Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Communications Timeout",
+          "sensitive" : false
+        },
+        "topic" : {
+          "displayName" : "Topic Name(s)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "topic",
+          "sensitive" : false
+        },
+        "separate-by-key" : {
+          "displayName" : "Separate By Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "separate-by-key",
+          "sensitive" : false
+        },
+        "kerberos-user-service" : {
+          "displayName" : "Kerberos User Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "kerberos-user-service",
+          "sensitive" : false
+        },
+        "message-header-encoding" : {
+          "displayName" : "Message Header Encoding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "message-header-encoding",
+          "sensitive" : false
+        },
+        "message-demarcator" : {
+          "displayName" : "Message Demarcator",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "message-demarcator",
+          "sensitive" : false
+        },
+        "sasl.password" : {
+          "displayName" : "Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.password",
+          "sensitive" : true
+        },
+        "key-attribute-encoding" : {
+          "displayName" : "Key Attribute Encoding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "key-attribute-encoding",
+          "sensitive" : false
+        },
+        "auto.offset.reset" : {
+          "displayName" : "Offset Reset",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "auto.offset.reset",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.kafka.pubsub.ConsumeKafka_2_6",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M3"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "128a1970-e820-398a-9f52-728ff3d0371a",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "ReplaceText",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -584.0,
+        "y" : 640.0
+      },
+      "properties" : {
+        "Regular Expression" : "1337",
+        "Replacement Value" : "2222",
+        "Evaluation Mode" : "Line-by-Line",
+        "Line-by-Line Evaluation Mode" : "All",
+        "Character Set" : "UTF-8",
+        "Maximum Buffer Size" : "1 MB",
+        "Replacement Strategy" : "Always Replace"
+      },
+      "propertyDescriptors" : {
+        "Regular Expression" : {
+          "displayName" : "Search Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Regular Expression",
+          "sensitive" : false
+        },
+        "Replacement Value" : {
+          "displayName" : "Replacement Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Replacement Value",
+          "sensitive" : false
+        },
+        "Evaluation Mode" : {
+          "displayName" : "Evaluation Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Evaluation Mode",
+          "sensitive" : false
+        },
+        "Text to Prepend" : {
+          "displayName" : "Text to Prepend",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Text to Prepend",
+          "sensitive" : false
+        },
+        "Line-by-Line Evaluation Mode" : {
+          "displayName" : "Line-by-Line Evaluation Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Line-by-Line Evaluation Mode",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Maximum Buffer Size" : {
+          "displayName" : "Maximum Buffer Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Buffer Size",
+          "sensitive" : false
+        },
+        "Replacement Strategy" : {
+          "displayName" : "Replacement Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Replacement Strategy",
+          "sensitive" : false
+        },
+        "Text to Append" : {
+          "displayName" : "Text to Append",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Text to Append",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ReplaceText",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-kafka-2-6-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M3"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c758f01a-775f-380f-9a7f-d4d810bef2c8",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "PublishKafka_2_6",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -584.0,
+        "y" : 848.0
+      },
+      "properties" : {
+        "compression.type" : "none",
+        "bootstrap.servers" : "localhost:9092",
+        "sasl.mechanism" : "GSSAPI",
+        "max.block.ms" : "5 sec",
+        "message-header-encoding" : "UTF-8",
+        "ack.wait.time" : "5 secs",
+        "use-transactions" : "true",
+        "acks" : "all",
+        "security.protocol" : "PLAINTEXT",
+        "max.request.size" : "1 MB",
+        "sasl.token.auth" : "false",
+        "Failure Strategy" : "Route to Failure",
+        "partitioner.class" : "org.apache.kafka.clients.producer.internals.DefaultPartitioner",
+        "topic" : "test_stateless_out",
+        "key-attribute-encoding" : "utf-8"
+      },
+      "propertyDescriptors" : {
+        "compression.type" : {
+          "displayName" : "Compression Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "compression.type",
+          "sensitive" : false
+        },
+        "attribute-name-regex" : {
+          "displayName" : "Attributes to Send as Headers (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attribute-name-regex",
+          "sensitive" : false
+        },
+        "bootstrap.servers" : {
+          "displayName" : "Kafka Brokers",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "bootstrap.servers",
+          "sensitive" : false
+        },
+        "sasl.kerberos.service.name" : {
+          "displayName" : "Kerberos Service Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.kerberos.service.name",
+          "sensitive" : false
+        },
+        "kafka-key" : {
+          "displayName" : "Kafka Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "kafka-key",
+          "sensitive" : false
+        },
+        "partition" : {
+          "displayName" : "Partition",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "partition",
+          "sensitive" : false
+        },
+        "sasl.mechanism" : {
+          "displayName" : "SASL Mechanism",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.mechanism",
+          "sensitive" : false
+        },
+        "max.block.ms" : {
+          "displayName" : "Max Metadata Wait Time",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max.block.ms",
+          "sensitive" : false
+        },
+        "message-header-encoding" : {
+          "displayName" : "Message Header Encoding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "message-header-encoding",
+          "sensitive" : false
+        },
+        "kerberos-user-service" : {
+          "displayName" : "Kerberos User Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "kerberos-user-service",
+          "sensitive" : false
+        },
+        "message-demarcator" : {
+          "displayName" : "Message Demarcator",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "message-demarcator",
+          "sensitive" : false
+        },
+        "transactional-id-prefix" : {
+          "displayName" : "Transactional Id Prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "transactional-id-prefix",
+          "sensitive" : false
+        },
+        "ack.wait.time" : {
+          "displayName" : "Acknowledgment Wait Time",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ack.wait.time",
+          "sensitive" : false
+        },
+        "sasl.username" : {
+          "displayName" : "Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.username",
+          "sensitive" : false
+        },
+        "use-transactions" : {
+          "displayName" : "Use Transactions",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "use-transactions",
+          "sensitive" : false
+        },
+        "acks" : {
+          "displayName" : "Delivery Guarantee",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "acks",
+          "sensitive" : false
+        },
+        "aws.profile.name" : {
+          "displayName" : "AWS Profile Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "aws.profile.name",
+          "sensitive" : false
+        },
+        "security.protocol" : {
+          "displayName" : "Security Protocol",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "security.protocol",
+          "sensitive" : false
+        },
+        "ssl.context.service" : {
+          "displayName" : "SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "ssl.context.service",
+          "sensitive" : false
+        },
+        "max.request.size" : {
+          "displayName" : "Max Request Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max.request.size",
+          "sensitive" : false
+        },
+        "sasl.token.auth" : {
+          "displayName" : "Token Authentication",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.token.auth",
+          "sensitive" : false
+        },
+        "Failure Strategy" : {
+          "displayName" : "Failure Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Failure Strategy",
+          "sensitive" : false
+        },
+        "partitioner.class" : {
+          "displayName" : "Partitioner class",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "partitioner.class",
+          "sensitive" : false
+        },
+        "topic" : {
+          "displayName" : "Topic Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "topic",
+          "sensitive" : false
+        },
+        "sasl.password" : {
+          "displayName" : "Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sasl.password",
+          "sensitive" : true
+        },
+        "key-attribute-encoding" : {
+          "displayName" : "Key Attribute Encoding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "key-attribute-encoding",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.kafka.pubsub.PublishKafka_2_6",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "flowIdentifier" : "t1",
+    "timestamp" : 0
+  }
 }
