@@ -118,7 +118,7 @@
       "properties" : {
         "Commit Offsets" : "true",
         "max.poll.records" : "10000",
-        "group.id" : "test_stateless_in_7",
+        "group.id" : "test_stateless_in_8",
         "bootstrap.servers" : "localhost:9092",
         "topic_type" : "names",
         "security.protocol" : "PLAINTEXT",
